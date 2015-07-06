@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link href='/public/style.css' rel='stylesheet'>
+</head>
+<body>
+  <div class='wrapper'>
+  <header class='header'>
+    <h1>Hillary's Movie Ratings</h1>
+    <p>See if you agree with my ratings!</p>
+  </header>
+  <h1>Add A Movie</h1>
+  <form class='form form-add' method='post' action='/movies'>
+    <label for='title'>Title
+      <input class='input' id='title' name='title' value='' type='text'>
+    </label>
+    <label for='director'>Director
+      <input class='input' id='director' name='director' value='' type='text'>
+    </label>
+    <label for='year'>Year
+      <input class='input' type='text' id='year' name='year' value=''>
+    </label>
+    <label for='rating'>My Rating
+      <input class='rating input' type='text' id='rating' name='rating' value=''>
+    </label>
+    <label for='url'>Poster URL
+      <input class='input' type='text' id='url' name='url' value=''>
+    </label>
+    <div class='new-shrink'>
+      <button class='button' type='submit'>Add a Movie</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

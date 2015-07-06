@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <div class='wrapper'>
+  <header class='header'>
+    <h1>Hillary's Movie Ratings</h1>
+    <p>See if you agree with my ratings!</p>
+  </header>
+  <h2>{{ title}}</h2>
+  <img src={{ url }}>
+  <form class='form' action='/movies/{{ _id }}/update' method='post'>
+    <label for='title'>Title
+      <input class='input-center' type='text' id='title' name='title' value='{{ title }}'/>
+    </label>
+    <label for='director'>Director
+      <input class='input-center' type='text' id='director' name='director' value='{{ director }}'/>
+    </label>
+    <label for='year'>Year
+      <input class='input-center' type='text' id='year' name='year' value='{{ year }}'/>
+    </label>
+    <label for='rating'>My rating
+      <input class='input-center' class='rating' type='text' id='rating' name='rating' value='{{ rating }}'/>
+    </label>
+    <label for='url'>Poster URL
+      <input class='input-center' type='text' id='url' name='url' value='{{ url }}'/>
+    </label>
+    <div class='shrink'>
+      <button class='button' type='submit'>Edit Movie</button>
+    </div>
+  </form>
+  </div><!-- End of wrapper -->
+</body>
+</html>

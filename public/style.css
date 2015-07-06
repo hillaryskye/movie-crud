@@ -1,0 +1,188 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+  background: khaki;
+  color: black;
+}
+.wrapper {
+  width: 92%;
+  margin: auto;
+}
+
+h1, h2 {
+  font-size: 30px;
+}
+h4 {
+  padding-left: 50px;
+}
+h4:hover {
+  text-decoration: underline;
+}
+p {
+  font-size: 20px;
+  color: black;
+}
+.header {
+  background-color: mediumslateblue;
+  color: white;
+  padding: 5px;
+  padding-left: 20px;
+  border: 1px solid black;
+  font-size: 30px;
+}
+.header h1, .header p {
+  color: white;
+}
+
+label, h3  {
+  color: black;
+  font-size: 20px;
+  margin-left: 50px;
+  display: block;
+  padding-top: 10px;
+  font-weight: bold;
+}
+input, a {
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+}
+input {
+  color: black;
+}
+nav {
+  padding-top: 18px;
+  padding-bottom: 14px;
+  text-align: center;
+  border-bottom: 1px solid #aaa;
+}
+nav h2, .one-fourth {
+  display: inline;
+/*   margin: 50px;
+ */}
+nav li, .one-fourth {
+  display: inline;
+  width: 14%;
+  float: left;
+  margin-left: 50px;
+}
+nav li {
+  font-size: 15px;
+}
+nav li a {
+  color: black;
+}
+nav li a:hover {
+  color: white;
+  text-decoration: underline;
+}
+nav a {
+  color: white;
+  font-size: 15px;
+}
+nav:after {
+  visibility: hidden;
+  overflow: hiden;
+}
+.add {
+  position: relative;
+  top: -60px;
+  margin-right: 10px;
+  float: right
+}
+.new:after {
+  visibility: hidden;
+  overflow: hidden;
+}
+.change {
+  margin-right: 9px;
+  float: right;
+  position: relative;
+  top: -50px;
+  margin-top: .4%;
+}
+button {
+  background-color: mediumslateblue;
+  color: white;
+  padding: 8px 30px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.button {
+  margin-top: 30px;
+}
+.rating {
+   width: 40px;
+ }
+ .input {
+   position: absolute;
+   left: 230px;
+   width: 230px;
+ }
+ .input-center {
+   position: absolute;
+   left: 535px;
+   width: 230px;
+ }
+ .shrink, .new-shrink {
+   margin: 0 auto;
+   width: 33%
+ }
+ .new-shrink {
+   width: 66%;
+ }
+ .show {
+   color: black;
+   margin: 0 auto;
+   width: 25%;
+   line-height: 1.2em;
+ }
+ .form {
+   margin: 0 auto;
+   color: black;
+   width: 40%;
+ }
+ .form-add {
+   width: 100%;
+ }
+ .big-img {
+   position: absolute;
+   margin-top: -61px;
+   z-index: -100;
+ }
+/* -------- COLUMN LAYOUTS -------*/
+/* -- Column Sizes -- */
+
+.one_fourth{ width:21.25%; }
+.one_third{ width:29.333%; }
+.one_half{ width:45.5%; }
+.two_third{ width:61.666%; }
+.three_fourth{ width:69.75%; }
+.one_column{ width:94%; }
+.full_column{ width:100%; }
+
+/* -- Column Margin & Float-- */
+.one_half,.one_third,.two_third,
+.three_fourth,.one_fourth,.one_column,
+.full_column {
+    margin-left:3%;
+    margin-top:1%;
+    float:left;
+}
+
+/* -- Column Row (aka Clearfix) -- */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* --- Responsive images --- */
+
+img, embed, object, video {
+  max-width: 100%;
+  height : auto;
+}

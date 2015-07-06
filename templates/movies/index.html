@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <div class='wrapper'>
+    <div class='header'>
+      <h1>Hillary's Movie Ratings</h1>
+      <p>See if you agree with my ratings!</p>
+    </div>
+  <main>
+    <h2>All Movies</h2>
+    <button class='add'><a href='/movies/{{ _id }}new/'>New Movie</a></button>
+    <nav class='row'>
+      <h3 class='one-fourth'>Title</h3>
+      <h3 class='one-fourth'>Director</h3>
+      <h3 class='one-fourth'>Year</h3>
+      <h3 class='one-fourth'>My Rating</h3>
+    </nav>
+      {{ #movies }}
+    <nav class='row'>
+
+      <li class='one-fourth'><a href="movies/{{ _id }}/"></a><a href='/movies/{{ _id }}/'>{{ title }}</a></li>
+      <li class='one-fourth'>{{ director }}</li>
+      <li class='one-fourth'>{{ year }}</li>
+      <li class='one-fourth'>{{ rating }}</li>
+    </nav>
+    <button class='change'><a href='/movies/{{ _id }}/edit'>Edit</a></button>
+    <form action='/movies/{{ _id }}/delete' method='post'>
+      <button class='change' type='submit'>Delete Movie</button>
+    </form>
+      {{ /movies }}
+    </main>
+  </div>
+
+
+</body>
+</html>
