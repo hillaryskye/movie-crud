@@ -1,6 +1,8 @@
 var http = require('http'),
   router = require('./router'),
      url = require('url')
+     
+require('dotenv').load()
 
 var server = http.createServer(function (req, res) {
   console.log(req.url)

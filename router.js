@@ -2,7 +2,7 @@ var routes = require('routes')(),
         fs = require('fs'),
       view = require('mustache'),
       mime = require('mime'),
-        db = require('monk')('localhost/movies'),
+        db = require('monk')(process.env.MONGO_URI),
     movies = db.get('movies'),
         qs = require('qs'),
       view = require('./view')
@@ -64,7 +64,7 @@ routes.addRoute('/movies/:id', (req, res, url) => {
     movies.findOne({ _id: url.params.id }, function (err, docs) {
     if (err) console.log('fucked up')
     var template = view.render('/movies/show', docs)
-    console.log('template', template)
+    console.log(template)
     res.end(template)
     })
   }
@@ -94,10 +94,10 @@ routes.addRoute('/movies/:id/delete', (req, res, url) => {
 })
 
 routes.addRoute('/movies/:id/update', function (req, res, url) {
-  var data = ''
+    var data = ''
   req.on('data', function (chunk) {
     data += chunk
-  })
+    })
 
   req.on('end', function () {
     var movie = qs.parse(data)
